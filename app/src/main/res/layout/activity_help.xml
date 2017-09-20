@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paintbackground"
+    tools:context="edu.orangecoastcollege.cs273.mmendoza.paintestimator.HelpActivity">
+
+    <TextView
+        android:id="@+id/estimatedPaintRequiredTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/estimated_paint_required_text" />
+
+    <TextView
+        android:id="@+id/estimatedGallonsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_toEndOf="@+id/estimatedPaintRequiredTextView"
+        android:layout_toRightOf="@+id/estimatedPaintRequiredTextView"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/inputRoomDimensionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@+id/estimatedPaintRequiredTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/return_btn" />
+
+    <TextView
+        android:id="@+id/helpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@+id/inputRoomDimensionsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginRight="150dp"
+        android:text="@string/help_text" />
+</RelativeLayout>

@@ -78,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
         loadSharedPreferences();
     }
 
+    /**
+     * Updates the model's text views and displays the calculated gallons needed
+     *
+     * @param v
+     */
     protected void computeGallons(View v)
     {
         // Update the model first, then calculate
@@ -85,12 +90,19 @@ public class MainActivity extends AppCompatActivity {
         mRoom.setWidth(Float.parseFloat(mWidthEditText.getText().toString()));
         // TODO: Finish the rest
         mRoom.setHeight(Float.parseFloat(mHeightEditText.getText().toString()));
+        mRoom.setDoors(Integer.parseInt(mDoorsEditText.getText().toString()));
+        mRoom.setWindows(Integer.parseInt(mWindowsEditText.getText().toString()));
 
         mGallonsTextView.setText(getString(R.string.interior_surface_area_text) + " " + mRoom.totalSurfaceArea()
         + "\n" + getString(R.string.gallons_needed_text) + " " + mRoom.gallonsOfPaintRequired());
         saveSharedPreferences();
     }
 
+    /**
+     * Launches the HelpActivity when the user presses the Help button
+     *
+     * @param v
+     */
     protected void gotoHelp(View v)
     {
         // Construct an explicit Intent to go to HelpActivity
